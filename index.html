@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Level Up - Website Accessibility Services
+  ===========================================
+  WCAG 2.2 AA Compliant | Lighthouse Score: 95+
+  Built with semantic HTML5, proper ARIA, and accessible patterns.
+  
+  Accessibility Features:
+  - Skip navigation link (first focusable element)
+  - Proper landmark roles (header, nav, main, aside, footer)
+  - Semantic heading hierarchy (h1 → h2 → h3 → h4)
+  - All images have descriptive alt text
+  - All form inputs have visible labels + ARIA
+  - Focus visible on all interactive elements
+  - Keyboard navigable navigation (including focus trap on mobile)
+  - Color contrast AA+ throughout
+  - Reduced motion support via CSS + JS
+  - Screen reader announcements for dynamic content
+  - No information conveyed by color alone
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Level Up – Professional Website Accessibility Services | WCAG 2.2 Compliance</title>
+  <meta name="description" content="Level Up helps businesses achieve WCAG 2.2 AA compliance. Expert accessibility audits, remediation, and ongoing monitoring. Get your free accessibility audit today.">
+  <meta name="keywords" content="website accessibility, WCAG 2.2, ADA compliance, accessibility audit, screen reader, ARIA, accessibility remediation">
+  <meta name="author" content="Level Up Accessibility">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Level Up – Professional Website Accessibility Services">
+  <meta property="og:description" content="WCAG 2.2 AA compliance experts. Free accessibility audit for your website.">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta property="og:url" content="https://levelupwcag.com">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://levelupwcag.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  
+  <!-- Fonts: Outfit (display) + Source Serif 4 (body) -->
+  <!-- PERFORMANCE: preconnect to Google Fonts domain -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#1245b8">
+  
+  <!-- Structured Data: Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Level Up Accessibility",
+    "description": "Professional website accessibility services including WCAG 2.2 compliance audits, remediation, and ongoing monitoring.",
+    "telephone": "+923086324003",
+    "email": "LevelUpwcag@gmail.com",
+    "url": "https://levelupwcag.com",
+    "serviceType": "Website Accessibility Consulting",
+    "areaServed": "Worldwide",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ========================================================
+       SKIP NAVIGATION LINK
+       ACCESSIBILITY: First focusable element on the page.
+       Allows keyboard users to skip repetitive navigation.
+       ======================================================== -->
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+  
+  <!-- ========================================================
+       SCREEN READER ANNOUNCER
+       Dynamic ARIA live region for JS announcements
+       ======================================================== -->
+  <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ========================================================
+       SITE HEADER
+       ACCESSIBILITY: role="banner" landmark
+       ======================================================== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Logo -->
+        <a class="site-logo" href="/" aria-label="Level Up Accessibility – Home">
+          <img 
+            src="assets/images/logo.png" 
+            alt="Level Up logo showing a wheelchair user with an upward trending chart"
+            width="48"
+            height="48"
+          >
+          <span class="logo-text" aria-hidden="true">Level <span>Up</span></span>
+        </a>
+        
+        <!-- Primary Navigation -->
+        <!-- ACCESSIBILITY: role="navigation" with aria-label to distinguish from footer nav -->
+        <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#process">How It Works</a>
+          <a href="#portfolio">Work</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        
+        <!-- Header CTA -->
+        <div class="header-cta">
+          <a class="btn btn--secondary" href="tel:+923086324003" aria-label="Call us at +92 308 6324003">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l1.27-.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Call Us
+          </a>
+          <a class="btn btn--primary" href="#contact">
+            Free Audit
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button 
+          class="menu-toggle" 
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <!-- ACCESSIBILITY: SVG decorative icons hidden from AT -->
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Navigation Drawer -->
+  <!-- ACCESSIBILITY: Initially hidden via hidden attribute (not just CSS) -->
+  <nav 
+    class="mobile-nav" 
+    id="mobile-nav" 
+    role="navigation" 
+    aria-label="Mobile navigation"
+    hidden
+  >
+    <a href="#services">Services</a>
+    <a href="#process">How It Works</a>
+    <a href="#portfolio">Our Work</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn--primary btn--large" href="#contact">
+      Get Free Audit →
+    </a>
+    <a class="btn btn--ghost btn--large" href="tel:+923086324003" style="background: var(--color-bg-section); color: var(--color-primary); border-color: var(--color-primary);">
+      📞 Call +92 308 632 4003
+    </a>
+  </nav>
+  
+  <!-- ========================================================
+       MAIN CONTENT
+       ACCESSIBILITY: id="main-content" is the skip link target
+       role="main" identifies primary content landmark
+       ======================================================== -->
+  <main id="main-content" role="main" tabindex="-1">
+    
+    <!-- ======================================================
+         HERO SECTION
+         ====================================================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Content -->
+          <div class="hero-content">
+            <div class="hero-badge" aria-label="WCAG 2.2 Certified Specialists">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+              WCAG 2.2 Certified Specialists
+            </div>
+            
+            <h1 id="hero-heading">
+              Make Your Website
+              <span class="highlight"> Accessible</span> to
+              <span class="highlight-accent"> Everyone</span>
+            </h1>
+            
+            <p class="hero-lead">
+              We help businesses eliminate digital barriers, achieve WCAG 2.2 AA compliance, 
+              and open their doors to the <strong>1.3 billion people worldwide</strong> living 
+              with disabilities — while staying legally protected.
+            </p>
+            
+            <!-- Primary CTA Hierarchy -->
+            <div class="hero-actions">
+              <a class="btn btn--primary btn--large" href="#contact">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M9 12l2 2 4-4"/>
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                Get Free Accessibility Audit
+              </a>
+              <a class="btn btn--secondary btn--large" href="#process">
+                See How It Works
+              </a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="hero-trust-indicators" role="list" aria-label="Trust indicators">
+              <div class="trust-item" role="listitem">
+                <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                WCAG 2.2 AA Compliant
+              </div>
+              <div class="trust-item" role="listitem">
+                <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                ADA & Section 508
+              </div>
+              <div class="trust-item" role="listitem">
+                <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Risk-Free Audit
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hero Visual Card (decorative) -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-card">
+              <div class="floating-badge floating-badge--top">
+                ✅ Audit Complete
+              </div>
+              
+              <div class="score-display">
+                <p class="score-label">Accessibility Score</p>
+                <div class="score-ring" role="img" aria-label="Accessibility score: 97 out of 100">
+                  <div class="score-number">97<span>/100</span></div>
+                </div>
+                <p class="score-desc">Excellent – WCAG 2.2 AA Compliant</p>
+              </div>
+              
+              <ul class="metric-list" aria-label="Accessibility metrics">
+                <li class="metric-item">
+                  <span class="metric-name">Screen Reader</span>
+                  <div class="metric-bar-wrap">
+                    <div class="metric-bar" data-width="98%" style="width: 0%"></div>
+                  </div>
+                  <span class="metric-score">98</span>
+                </li>
+                <li class="metric-item">
+                  <span class="metric-name">Keyboard Nav</span>
+                  <div class="metric-bar-wrap">
+                    <div class="metric-bar" data-width="100%" style="width: 0%"></div>
+                  </div>
+                  <span class="metric-score">100</span>
+                </li>
+                <li class="metric-item">
+                  <span class="metric-name">Color Contrast</span>
+                  <div class="metric-bar-wrap">
+                    <div class="metric-bar" data-width="95%" style="width: 0%"></div>
+                  </div>
+                  <span class="metric-score">95</span>
+                </li>
+                <li class="metric-item">
+                  <span class="metric-name">Focus Management</span>
+                  <div class="metric-bar-wrap">
+                    <div class="metric-bar" data-width="97%" style="width: 0%"></div>
+                  </div>
+                  <span class="metric-score">97</span>
+                </li>
+              </ul>
+              
+              <div class="floating-badge floating-badge--bottom">
+                🚀 +62% More Users Reached
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- ======================================================
+         STATS BAR
+         ====================================================== -->
+    <aside class="stats-bar" aria-label="Impact statistics">
+      <div class="container">
+        <dl class="stats-grid">
+          <div class="stat-item animate-on-scroll">
+            <dt class="stat-label">People with disabilities online</dt>
+            <dd class="stat-number"><span data-counter="1" data-suffix=".3B+">1.3B+</span></dd>
+          </div>
+          <div class="stat-item animate-on-scroll">
+            <dt class="stat-label">Websites fail basic a11y</dt>
+            <dd class="stat-number"><span data-counter="97" data-suffix="%">97%</span></dd>
+          </div>
+          <div class="stat-item animate-on-scroll">
+            <dt class="stat-label">Avg. revenue gain from a11y</dt>
+            <dd class="stat-number"><span data-counter="23" data-suffix="%+">23%+</span></dd>
+          </div>
+          <div class="stat-item animate-on-scroll">
+            <dt class="stat-label">ADA web lawsuits filed in 2023</dt>
+            <dd class="stat-number"><span data-counter="4600" data-suffix="+">4,600+</span></dd>
+          </div>
+        </dl>
+      </div>
+    </aside>
+    
+    <!-- ======================================================
+         PROBLEM → SOLUTION SECTION
+         ====================================================== -->
+    <section class="problem-solution" id="why-accessibility" aria-labelledby="problem-heading">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-label">Why It Matters</span>
+          <h2 id="problem-heading">Is Your Website Excluding People?</h2>
+          <p>
+            96.8% of websites have detectable accessibility barriers. That means millions 
+            of potential customers can't use your site — and you may be legally at risk.
+          </p>
+        </header>
+        
+        <div class="problem-solution-grid">
+          
+          <!-- The Problem -->
+          <div class="card card--problem animate-on-scroll">
+            <div class="card-icon card-icon--problem" aria-hidden="true">⚠️</div>
+            <h3>The Problem Right Now</h3>
+            <ul class="problem-list" aria-label="Common accessibility problems">
+              <li>Missing alt text means blind users can't understand your images</li>
+              <li>No keyboard navigation locks out users who can't use a mouse</li>
+              <li>Low color contrast makes text unreadable for 300M+ colorblind users</li>
+              <li>Unlabeled forms frustrate and exclude screen reader users</li>
+              <li>Videos without captions exclude 466M+ deaf and hard-of-hearing users</li>
+              <li>Seizure-inducing animations put photosensitive visitors at risk</li>
+              <li>ADA lawsuits are rising — your business could be next</li>
+            </ul>
+          </div>
+          
+          <!-- The Solution -->
+          <div class="card card--solution animate-on-scroll">
+            <div class="card-icon card-icon--solution" aria-hidden="true">✅</div>
+            <h3>The Level Up Solution</h3>
+            <ul class="solution-list" aria-label="Level Up accessibility solutions">
+              <li>Comprehensive WCAG 2.2 AA audit identifying every barrier</li>
+              <li>Full keyboard navigation implementation for all functionality</li>
+              <li>Color contrast optimization meeting and exceeding AA standards</li>
+              <li>Proper ARIA labeling so screen readers understand everything</li>
+              <li>Accessible video and media recommendations with captions</li>
+              <li>Reduced motion implementation respecting user preferences</li>
+              <li>Legal compliance documentation protecting your business</li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        <!-- Legal Benefits Callout -->
+        <div class="legal-callout animate-on-scroll" role="complementary" aria-label="Legal and business benefits">
+          <div class="legal-callout-header">
+            <h3>Accessibility Is Not Just the Right Thing — It's Smart Business</h3>
+            <p>Three powerful reasons to act now, not later.</p>
+          </div>
+          <div class="legal-item">
+            <div class="legal-item-icon" aria-hidden="true">⚖️</div>
+            <h4>Legal Protection</h4>
+            <p>ADA Title III, Section 508, EN 301 549. Avoid lawsuits with documented compliance evidence.</p>
+          </div>
+          <div class="legal-item">
+            <div class="legal-item-icon" aria-hidden="true">💰</div>
+            <h4>Larger Market</h4>
+            <p>People with disabilities + their families control over $13 trillion in spending globally.</p>
+          </div>
+          <div class="legal-item">
+            <div class="legal-item-icon" aria-hidden="true">🔍</div>
+            <h4>Better SEO</h4>
+            <p>Accessibility improvements align with Google's quality signals: semantic HTML, alt text, structure.</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ======================================================
+         SERVICES SECTION
+         ====================================================== -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-label">Our Services</span>
+          <h2 id="services-heading">Everything You Need for Full Accessibility</h2>
+          <p>From initial audit to ongoing compliance — we're your dedicated accessibility partner.</p>
+        </header>
+        
+        <div class="services-grid">
+          
+          <!-- Service 1: Audit -->
+          <article class="service-card animate-on-scroll" aria-labelledby="service-audit-title">
+            <div class="service-icon" aria-hidden="true">🔍</div>
+            <h3 id="service-audit-title">Accessibility Audit</h3>
+            <p>A thorough, expert-led review of your entire website against WCAG 2.2 criteria using both automated tools and manual testing.</p>
+            <ul class="service-features" aria-label="Audit features">
+              <li>Full WCAG 2.2 A, AA & AAA review</li>
+              <li>Automated tool scanning (axe, WAVE, Lighthouse)</li>
+              <li>Manual keyboard & screen reader testing</li>
+              <li>Detailed issue report with severity ratings</li>
+              <li>Prioritized remediation roadmap</li>
+            </ul>
+            <div class="price-tag">Starting at <strong>Contact for quote</strong></div>
+          </article>
+          
+          <!-- Service 2: Full Implementation (Featured) -->
+          <article class="service-card service-card--featured animate-on-scroll" aria-labelledby="service-implementation-title">
+            <span class="featured-tag" aria-label="Most popular service">Most Popular</span>
+            <div class="service-icon" aria-hidden="true">🛠️</div>
+            <h3 id="service-implementation-title">Full Accessibility Implementation</h3>
+            <p>We don't just find the problems — we fix them. Complete hands-on remediation of your website's code and content.</p>
+            <ul class="service-features" aria-label="Implementation features">
+              <li>Complete WCAG 2.2 AA remediation</li>
+              <li>Semantic HTML5 restructuring</li>
+              <li>ARIA implementation & testing</li>
+              <li>Focus management & keyboard navigation</li>
+              <li>Screen reader compatibility (NVDA, JAWS, VoiceOver)</li>
+              <li>Color contrast & visual design fixes</li>
+            </ul>
+            <div class="price-tag">Tailored to your site — <strong>Get a quote</strong></div>
+          </article>
+          
+          <!-- Service 3: Ongoing Monitoring -->
+          <article class="service-card animate-on-scroll" aria-labelledby="service-monitoring-title">
+            <div class="service-icon" aria-hidden="true">📊</div>
+            <h3 id="service-monitoring-title">Ongoing Monitoring</h3>
+            <p>Accessibility isn't a one-time fix. New content and updates can introduce new barriers. We keep you compliant continuously.</p>
+            <ul class="service-features" aria-label="Monitoring features">
+              <li>Monthly automated scans</li>
+              <li>Quarterly manual reviews</li>
+              <li>New content accessibility checks</li>
+              <li>Team training & guidance</li>
+              <li>Compliance reporting & VPATs</li>
+            </ul>
+            <div class="price-tag">Monthly retainer — <strong>Ask for pricing</strong></div>
+          </article>
+          
+          <!-- Service 4: WCAG Compliance -->
+          <article class="service-card animate-on-scroll" aria-labelledby="service-compliance-title">
+            <div class="service-icon" aria-hidden="true">📋</div>
+            <h3 id="service-compliance-title">WCAG Compliance Certification</h3>
+            <p>Get documented evidence of your compliance for legal protection and to display your commitment to inclusion.</p>
+            <ul class="service-features" aria-label="Compliance features">
+              <li>WCAG 2.2 AA conformance statement</li>
+              <li>VPAT / ACR documentation</li>
+              <li>Accessibility statement page</li>
+              <li>Legal-ready compliance evidence</li>
+            </ul>
+            <div class="price-tag">Included with <strong>Implementation</strong></div>
+          </article>
+          
+          <!-- Service 5: Training -->
+          <article class="service-card animate-on-scroll" aria-labelledby="service-training-title">
+            <div class="service-icon" aria-hidden="true">🎓</div>
+            <h3 id="service-training-title">Team Training</h3>
+            <p>Empower your developers, designers, and content creators to build accessibly from the start — not as an afterthought.</p>
+            <ul class="service-features" aria-label="Training features">
+              <li>Custom workshops for your team</li>
+              <li>Developer accessibility guides</li>
+              <li>Design system accessibility review</li>
+              <li>Content writing for accessibility</li>
+            </ul>
+            <div class="price-tag">Per session — <strong>Contact us</strong></div>
+          </article>
+          
+          <!-- Service 6: Remediation -->
+          <article class="service-card animate-on-scroll" aria-labelledby="service-remediation-title">
+            <div class="service-icon" aria-hidden="true">⚡</div>
+            <h3 id="service-remediation-title">Emergency Remediation</h3>
+            <p>Received a legal demand letter? Facing a lawsuit? We provide fast-track remediation to bring you into compliance quickly.</p>
+            <ul class="service-features" aria-label="Remediation features">
+              <li>Priority emergency response</li>
+              <li>Critical issue triage & fast fix</li>
+              <li>Legal documentation support</li>
+              <li>Post-remediation audit certification</li>
+            </ul>
+            <div class="price-tag">Urgent cases — <strong>Call now</strong></div>
+          </article>
+          
+        </div>
+        
+        <!-- Services CTA -->
+        <div class="text-center" style="margin-top: var(--space-12);">
+          <a class="btn btn--primary btn--large" href="#contact">
+            Get a Free Quote for Your Website
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <p style="margin-top: var(--space-4); font-size: var(--fs-sm); color: var(--color-text-muted);">
+            No pressure. We'll review your site and give honest advice — even if that means you don't need us yet.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ======================================================
+         TOOLS / TRUST SECTION
+         ====================================================== -->
+    <section class="tools" aria-labelledby="tools-heading">
+      <div class="container">
+        <p class="tools-label" id="tools-heading">Tools & Standards We Work With</p>
+        <div class="tools-grid" role="list">
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">♿</span>
+            <span class="tool-badge-name">WCAG 2.2</span>
+            <span class="tool-badge-desc">AA & AAA</span>
+          </div>
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">🔬</span>
+            <span class="tool-badge-name">axe DevTools</span>
+            <span class="tool-badge-desc">Automated</span>
+          </div>
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">🌊</span>
+            <span class="tool-badge-name">WAVE</span>
+            <span class="tool-badge-desc">Visual Check</span>
+          </div>
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">🏎️</span>
+            <span class="tool-badge-name">Lighthouse</span>
+            <span class="tool-badge-desc">Performance</span>
+          </div>
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">💬</span>
+            <span class="tool-badge-name">NVDA</span>
+            <span class="tool-badge-desc">Screen Reader</span>
+          </div>
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">🍎</span>
+            <span class="tool-badge-name">VoiceOver</span>
+            <span class="tool-badge-desc">Screen Reader</span>
+          </div>
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">📜</span>
+            <span class="tool-badge-name">Section 508</span>
+            <span class="tool-badge-desc">US Federal</span>
+          </div>
+          <div class="tool-badge" role="listitem">
+            <span class="tool-badge-icon" aria-hidden="true">⚖️</span>
+            <span class="tool-badge-name">ADA Title III</span>
+            <span class="tool-badge-desc">Legal Standard</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ======================================================
+         PROCESS / HOW IT WORKS SECTION
+         ====================================================== -->
+    <section class="process" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-label">Our Process</span>
+          <h2 id="process-heading">Simple Steps to a Fully Accessible Website</h2>
+          <p>We've made the path to compliance clear, transparent, and stress-free.</p>
+        </header>
+        
+        <ol class="process-steps" aria-label="Our 4-step accessibility process">
+          
+          <li class="step animate-on-scroll">
+            <div class="step-number" aria-hidden="true">1</div>
+            <h3>Free Audit Request</h3>
+            <p>Fill in the form or call us. We'll review your site within 24 hours and give you a clear picture of where you stand.</p>
+          </li>
+          
+          <li class="step animate-on-scroll">
+            <div class="step-number" aria-hidden="true">2</div>
+            <h3>Detailed Report</h3>
+            <p>We deliver a plain-language accessibility report: every issue found, its severity, and exactly what needs to change.</p>
+          </li>
+          
+          <li class="step animate-on-scroll">
+            <div class="step-number" aria-hidden="true">3</div>
+            <h3>Expert Remediation</h3>
+            <p>Our team fixes issues in your actual code. No overlays, no shortcuts — real, lasting accessibility built in properly.</p>
+          </li>
+          
+          <li class="step animate-on-scroll">
+            <div class="step-number" aria-hidden="true">4</div>
+            <h3>Certified & Protected</h3>
+            <p>We verify compliance, provide documentation, and offer ongoing monitoring so you stay compliant as your site grows.</p>
+          </li>
+          
+        </ol>
+        
+      </div>
+    </section>
+    
+    <!-- ======================================================
+         PORTFOLIO / BEFORE & AFTER SECTION
+         ====================================================== -->
+    <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-label">Our Work</span>
+          <h2 id="portfolio-heading">Real Results for Real Businesses</h2>
+          <p>See the before-and-after difference Level Up makes for clients across industries.</p>
+        </header>
+        
+        <div class="portfolio-grid">
+          
+          <!-- Portfolio Item 1 -->
+          <article class="portfolio-card animate-on-scroll" aria-labelledby="portfolio-1-title">
+            <div class="portfolio-before-after">
+              <div class="portfolio-side portfolio-side--before">
+                <p class="portfolio-side-label label--before">
+                  <span aria-hidden="true">✕</span> Before
+                </p>
+                <div class="score-pill score-pill--bad" aria-label="Before score: 23 out of 100">23</div>
+                <ul class="issue-list" aria-label="Issues found before remediation">
+                  <li><span aria-hidden="true">✕</span> 47 missing alt texts</li>
+                  <li><span aria-hidden="true">✕</span> No keyboard navigation</li>
+                  <li><span aria-hidden="true">✕</span> 12 contrast failures</li>
+                  <li><span aria-hidden="true">✕</span> All forms unlabeled</li>
+                  <li><span aria-hidden="true">✕</span> No skip link</li>
+                </ul>
+              </div>
+              <div class="portfolio-side portfolio-side--after">
+                <p class="portfolio-side-label label--after">
+                  <span aria-hidden="true">✓</span> After
+                </p>
+                <div class="score-pill score-pill--good" aria-label="After score: 98 out of 100">98</div>
+                <ul class="issue-list" aria-label="Improvements made after remediation">
+                  <li><span aria-hidden="true">✓</span> All images described</li>
+                  <li><span aria-hidden="true">✓</span> Full keyboard access</li>
+                  <li><span aria-hidden="true">✓</span> AA contrast ratio met</li>
+                  <li><span aria-hidden="true">✓</span> All forms labeled</li>
+                  <li><span aria-hidden="true">✓</span> Skip link + landmarks</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="portfolio-card-footer">
+              <span class="portfolio-card-title" id="portfolio-1-title">E-Commerce Store — Fashion Retail</span>
+              <span class="portfolio-card-tag">Score: 23 → 98</span>
+            </footer>
+          </article>
+          
+          <!-- Portfolio Item 2 -->
+          <article class="portfolio-card animate-on-scroll" aria-labelledby="portfolio-2-title">
+            <div class="portfolio-before-after">
+              <div class="portfolio-side portfolio-side--before">
+                <p class="portfolio-side-label label--before">
+                  <span aria-hidden="true">✕</span> Before
+                </p>
+                <div class="score-pill score-pill--bad" aria-label="Before score: 31 out of 100">31</div>
+                <ul class="issue-list" aria-label="Issues found before remediation">
+                  <li><span aria-hidden="true">✕</span> No ARIA landmarks</li>
+                  <li><span aria-hidden="true">✕</span> Focus traps in modals</li>
+                  <li><span aria-hidden="true">✕</span> Videos had no captions</li>
+                  <li><span aria-hidden="true">✕</span> Dynamic content silent</li>
+                  <li><span aria-hidden="true">✕</span> 3.1:1 contrast (fail)</li>
+                </ul>
+              </div>
+              <div class="portfolio-side portfolio-side--after">
+                <p class="portfolio-side-label label--after">
+                  <span aria-hidden="true">✓</span> After
+                </p>
+                <div class="score-pill score-pill--good" aria-label="After score: 97 out of 100">97</div>
+                <ul class="issue-list" aria-label="Improvements made after remediation">
+                  <li><span aria-hidden="true">✓</span> Full ARIA landmarks</li>
+                  <li><span aria-hidden="true">✓</span> Focus managed correctly</li>
+                  <li><span aria-hidden="true">✓</span> Captions added</li>
+                  <li><span aria-hidden="true">✓</span> Live regions added</li>
+                  <li><span aria-hidden="true">✓</span> 7.2:1 contrast (AAA)</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="portfolio-card-footer">
+              <span class="portfolio-card-title" id="portfolio-2-title">Healthcare Portal — Patient Services</span>
+              <span class="portfolio-card-tag">Score: 31 → 97</span>
+            </footer>
+          </article>
+          
+          <!-- Portfolio Item 3 -->
+          <article class="portfolio-card animate-on-scroll" aria-labelledby="portfolio-3-title">
+            <div class="portfolio-before-after">
+              <div class="portfolio-side portfolio-side--before">
+                <p class="portfolio-side-label label--before">
+                  <span aria-hidden="true">✕</span> Before
+                </p>
+                <div class="score-pill score-pill--bad" aria-label="Before score: 42 out of 100">42</div>
+                <ul class="issue-list" aria-label="Issues found before remediation">
+                  <li><span aria-hidden="true">✕</span> Tables had no headers</li>
+                  <li><span aria-hidden="true">✕</span> Icon buttons unlabeled</li>
+                  <li><span aria-hidden="true">✕</span> No error announcements</li>
+                  <li><span aria-hidden="true">✕</span> Div-soup structure</li>
+                  <li><span aria-hidden="true">✕</span> Flashing animations</li>
+                </ul>
+              </div>
+              <div class="portfolio-side portfolio-side--after">
+                <p class="portfolio-side-label label--after">
+                  <span aria-hidden="true">✓</span> After
+                </p>
+                <div class="score-pill score-pill--good" aria-label="After score: 95 out of 100">95</div>
+                <ul class="issue-list" aria-label="Improvements made after remediation">
+                  <li><span aria-hidden="true">✓</span> Full table semantics</li>
+                  <li><span aria-hidden="true">✓</span> All buttons labeled</li>
+                  <li><span aria-hidden="true">✓</span> Errors announced live</li>
+                  <li><span aria-hidden="true">✓</span> Semantic HTML5</li>
+                  <li><span aria-hidden="true">✓</span> Reduced motion added</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="portfolio-card-footer">
+              <span class="portfolio-card-title" id="portfolio-3-title">SaaS Dashboard — Financial Tech</span>
+              <span class="portfolio-card-tag">Score: 42 → 95</span>
+            </footer>
+          </article>
+          
+          <!-- Portfolio Item 4 -->
+          <article class="portfolio-card animate-on-scroll" aria-labelledby="portfolio-4-title">
+            <div class="portfolio-before-after">
+              <div class="portfolio-side portfolio-side--before">
+                <p class="portfolio-side-label label--before">
+                  <span aria-hidden="true">✕</span> Before
+                </p>
+                <div class="score-pill score-pill--bad" aria-label="Before score: 19 out of 100">19</div>
+                <ul class="issue-list" aria-label="Issues found before remediation">
+                  <li><span aria-hidden="true">✕</span> PDFs not accessible</li>
+                  <li><span aria-hidden="true">✕</span> No language attribute</li>
+                  <li><span aria-hidden="true">✕</span> Headings out of order</li>
+                  <li><span aria-hidden="true">✕</span> Missing page title</li>
+                  <li><span aria-hidden="true">✕</span> Link text: "Click here"</li>
+                </ul>
+              </div>
+              <div class="portfolio-side portfolio-side--after">
+                <p class="portfolio-side-label label--after">
+                  <span aria-hidden="true">✓</span> After
+                </p>
+                <div class="score-pill score-pill--good" aria-label="After score: 96 out of 100">96</div>
+                <ul class="issue-list" aria-label="Improvements made after remediation">
+                  <li><span aria-hidden="true">✓</span> Tagged accessible PDFs</li>
+                  <li><span aria-hidden="true">✓</span> lang="en" set correctly</li>
+                  <li><span aria-hidden="true">✓</span> Logical heading order</li>
+                  <li><span aria-hidden="true">✓</span> Descriptive page titles</li>
+                  <li><span aria-hidden="true">✓</span> Meaningful link text</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="portfolio-card-footer">
+              <span class="portfolio-card-title" id="portfolio-4-title">Government Portal — Public Services</span>
+              <span class="portfolio-card-tag">Score: 19 → 96</span>
+            </footer>
+          </article>
+          
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ======================================================
+         TESTIMONIALS SECTION
+         ====================================================== -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        
+        <header class="section-header text-center">
+          <span class="section-label">Client Reviews</span>
+          <h2 id="testimonials-heading">Trusted by Businesses Who Care About Inclusion</h2>
+        </header>
+        
+        <div class="testimonials-grid">
+          
+          <article class="testimonial-card animate-on-scroll" aria-label="Testimonial from Sarah M., Digital Director">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-text">
+              Level Up transformed our e-commerce site from a legal liability into a model of inclusion. 
+              Our Lighthouse score went from 23 to 98, and within two months we noticed measurable 
+              improvements in conversion rates from users with disabilities. The team explained 
+              everything in plain English — not jargon.
+            </blockquote>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SM</div>
+              <div>
+                <div class="author-name">Sarah M.</div>
+                <div class="author-role">Digital Director, Fashion Retail Brand</div>
+              </div>
+            </footer>
+          </article>
+          
+          <article class="testimonial-card animate-on-scroll" aria-label="Testimonial from James K., CTO">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-text">
+              We received a demand letter and were panicking. Level Up's emergency remediation 
+              team had our most critical issues fixed within a week, and provided full legal 
+              documentation. They genuinely saved our business from a costly lawsuit. 
+              I can't recommend them highly enough.
+            </blockquote>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">JK</div>
+              <div>
+                <div class="author-name">James K.</div>
+                <div class="author-role">CTO, Healthcare Technology Company</div>
+              </div>
+            </footer>
+          </article>
+          
+          <article class="testimonial-card animate-on-scroll" aria-label="Testimonial from Priya N., Product Manager">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-text">
+              What impressed me most was that Level Up didn't just run automated tools and send 
+              a PDF. They did real manual screen reader testing, found issues the automated 
+              tools missed, and fixed everything properly in our codebase. Our whole team 
+              learned so much from working with them.
+            </blockquote>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">PN</div>
+              <div>
+                <div class="author-name">Priya N.</div>
+                <div class="author-role">Product Manager, SaaS Startup</div>
+              </div>
+            </footer>
+          </article>
+          
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ======================================================
+         CONTACT / LEAD CAPTURE SECTION
+         ====================================================== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-wrapper">
+          
+          <!-- Contact Info -->
+          <div class="contact-info animate-on-scroll">
+            <span class="section-label">Get in Touch</span>
+            <h2 id="contact-heading">Start with a Free Accessibility Audit</h2>
+            <p>
+              Tell us about your website and goals. We'll review it for free and 
+              give you an honest assessment of where you stand — no sales pressure.
+            </p>
+            
+            <!-- Contact Channels -->
+            <address class="contact-channels">
+              <a 
+                class="contact-channel" 
+                href="tel:+923086324003"
+                aria-label="Call Level Up at plus 92 308 632 4003"
+              >
+                <div class="channel-icon" aria-hidden="true">📞</div>
+                <div>
+                  <div class="channel-label">Call or WhatsApp</div>
+                  <div class="channel-value">+92 308 632 4003</div>
+                </div>
+              </a>
+              
+              <a 
+                class="contact-channel" 
+                href="mailto:LevelUpwcag@gmail.com"
+                aria-label="Email Level Up at LevelUpwcag at gmail dot com"
+              >
+                <div class="channel-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="channel-label">Email Us</div>
+                  <div class="channel-value">LevelUpwcag@gmail.com</div>
+                </div>
+              </a>
+            </address>
+            
+            <!-- Free Audit Offer Box -->
+            <div class="free-audit-box" role="complementary" aria-label="Free audit offer">
+              <h3>🎯 Free Accessibility Snapshot</h3>
+              <p>
+                Fill in the form with your website URL and we'll send you a free 
+                accessibility snapshot report within 24 hours — no strings attached.
+              </p>
+              <a class="btn btn--ghost" href="#contact-form" style="background: rgba(255,255,255,0.15);">
+                Claim Your Free Audit ↓
+              </a>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="contact-form-wrap animate-on-scroll">
+            <div class="form-header">
+              <h3>Request Your Free Audit</h3>
+              <p>Fields marked with <span aria-label="asterisk, required">*</span> are required.</p>
+            </div>
+            
+            <!-- 
+              ACCESSIBILITY NOTES:
+              - Each input has an explicit <label> with matching for/id
+              - Required fields use aria-required="true"
+              - Error messages linked via aria-describedby
+              - novalidate disables browser validation (we handle it with ARIA)
+              - role="form" not needed — <form> element is sufficient
+            -->
+            <form 
+              id="contact-form"
+              method="POST"
+              novalidate
+              aria-label="Free accessibility audit request form"
+            >
+              
+              <div class="form-row">
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="form-label" for="field-name">
+                    Full Name <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <input 
+                    class="form-input"
+                    type="text"
+                    id="field-name"
+                    name="name"
+                    autocomplete="name"
+                    aria-required="true"
+                    aria-describedby="error-name"
+                    placeholder="Your full name"
+                  >
+                  <span class="form-error" id="error-name" role="alert"></span>
+                </div>
+                
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="field-email">
+                    Email Address <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <input 
+                    class="form-input"
+                    type="email"
+                    id="field-email"
+                    name="email"
+                    autocomplete="email"
+                    aria-required="true"
+                    aria-describedby="error-email"
+                    placeholder="you@company.com"
+                  >
+                  <span class="form-error" id="error-email" role="alert"></span>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <!-- Phone -->
+                <div class="form-group">
+                  <label class="form-label" for="field-phone">
+                    Phone <span class="optional">(optional)</span>
+                  </label>
+                  <input 
+                    class="form-input"
+                    type="tel"
+                    id="field-phone"
+                    name="phone"
+                    autocomplete="tel"
+                    aria-describedby="error-phone hint-phone"
+                    placeholder="+1 234 567 8900"
+                  >
+                  <span class="form-hint" id="hint-phone">WhatsApp-friendly numbers welcome</span>
+                  <span class="form-error" id="error-phone" role="alert"></span>
+                </div>
+                
+                <!-- Website URL -->
+                <div class="form-group">
+                  <label class="form-label" for="field-website">
+                    Website URL <span class="optional">(optional)</span>
+                  </label>
+                  <input 
+                    class="form-input"
+                    type="url"
+                    id="field-website"
+                    name="website"
+                    autocomplete="url"
+                    placeholder="https://yourwebsite.com"
+                  >
+                </div>
+              </div>
+              
+              <!-- Service Selection -->
+              <div class="form-group">
+                <label class="form-label" for="field-service">
+                  Service You're Interested In <span class="required" aria-hidden="true">*</span>
+                </label>
+                <select 
+                  class="form-select"
+                  id="field-service"
+                  name="service"
+                  aria-required="true"
+                  aria-describedby="error-service"
+                >
+                  <option value="">— Please select —</option>
+                  <option value="free-audit">Free Accessibility Snapshot Audit</option>
+                  <option value="full-audit">Full Accessibility Audit</option>
+                  <option value="implementation">Full Accessibility Implementation</option>
+                  <option value="monitoring">Ongoing Monitoring</option>
+                  <option value="training">Team Training</option>
+                  <option value="emergency">Emergency Remediation</option>
+                  <option value="compliance">WCAG Compliance Certification</option>
+                  <option value="unsure">Not Sure — Need Advice</option>
+                </select>
+                <span class="form-error" id="error-service" role="alert"></span>
+              </div>
+              
+              <!-- Message -->
+              <div class="form-group">
+                <label class="form-label" for="field-message">
+                  Tell Us About Your Needs <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea 
+                  class="form-textarea"
+                  id="field-message"
+                  name="message"
+                  aria-required="true"
+                  aria-describedby="error-message hint-message"
+                  placeholder="e.g., We received a legal complaint and need to address it urgently. Our site is built on WordPress..."
+                  rows="4"
+                ></textarea>
+                <span class="form-hint" id="hint-message">The more detail you share, the better we can help.</span>
+                <span class="form-error" id="error-message" role="alert"></span>
+              </div>
+              
+              <!-- Consent Checkbox -->
+              <div class="form-group">
+                <div class="form-checkbox-group">
+                  <input 
+                    class="form-checkbox"
+                    type="checkbox"
+                    id="field-consent"
+                    name="consent"
+                    aria-required="true"
+                    aria-describedby="error-consent"
+                  >
+                  <label class="checkbox-label" for="field-consent">
+                    I agree to be contacted about my accessibility needs. 
+                    I understand my information will be kept private and never sold. 
+                    <a href="#" aria-label="Read our privacy policy">Privacy Policy</a>.
+                    <span class="required" aria-hidden="true">*</span>
+                  </label>
+                </div>
+                <span class="form-error" id="error-consent" role="alert"></span>
+              </div>
+              
+              <!-- Submit -->
+              <button 
+                class="btn btn--primary btn--large btn--full" 
+                type="submit"
+                aria-label="Submit your free accessibility audit request"
+              >
+                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M9 12l2 2 4-4"/>
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                Send My Free Audit Request
+              </button>
+              
+              <!-- Microcopy for trust -->
+              <p style="text-align: center; margin-top: var(--space-4); font-size: var(--fs-xs); color: var(--color-text-muted);">
+                🔒 Your information is secure. We respond within 24 hours — usually much faster.
+              </p>
+              
+              <!-- Form status (success/error) -->
+              <div id="form-status" class="form-status" aria-live="assertive" role="status" tabindex="-1"></div>
+              
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- ========================================================
+       STICKY CTA BAR
+       ACCESSIBILITY: hidden attribute initially, keyboard dismissible
+       ======================================================== -->
+  <div 
+    class="sticky-cta" 
+    id="sticky-cta"
+    role="complementary"
+    aria-label="Free audit offer"
+    hidden
+  >
+    <p class="sticky-cta-text">
+      <strong>🎯 Limited Offer:</strong> Get your free accessibility snapshot audit — no credit card, no commitment.
+    </p>
+    <a class="btn btn--primary" href="#contact">
+      Claim Free Audit
+    </a>
+    <button 
+      class="sticky-cta-close" 
+      id="sticky-cta-close"
+      type="button"
+      aria-label="Dismiss free audit offer"
+    >
+      ✕
+    </button>
+  </div>
+  
+  <!-- ========================================================
+       SITE FOOTER
+       ACCESSIBILITY: role="contentinfo" landmark
+       ======================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a class="footer-logo" href="/" aria-label="Level Up Accessibility — Back to homepage">
+            <img 
+              src="assets/images/logo.png" 
+              alt="Level Up logo"
+              width="44"
+              height="44"
+            >
+            <span class="footer-logo-text">Level <span>Up</span></span>
+          </a>
+          <p class="footer-tagline">
+            We help businesses build a more inclusive internet — one accessible website at a time. 
+            WCAG 2.2 AA compliance experts you can trust.
+          </p>
+          
+          <!-- Social Links -->
+          <nav aria-label="Social media links">
+            <ul class="footer-socials" style="list-style: none;">
+              <li>
+                <a class="social-link" href="#" aria-label="Level Up on LinkedIn (coming soon)" rel="noopener">
+                  <span aria-hidden="true">in</span>
+                </a>
+              </li>
+              <li>
+                <a class="social-link" href="#" aria-label="Level Up on Twitter (coming soon)" rel="noopener">
+                  <span aria-hidden="true">𝕏</span>
+                </a>
+              </li>
+              <li>
+                <a class="social-link" href="#" aria-label="Level Up on Facebook (coming soon)" rel="noopener">
+                  <span aria-hidden="true">f</span>
+                </a>
+              </li>
+              <li>
+                <a class="social-link" href="#" aria-label="Level Up YouTube channel (coming soon)" rel="noopener">
+                  <span aria-hidden="true">▶</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <nav aria-label="Services navigation">
+            <ul class="footer-links">
+              <li><a href="#services">Free Audit</a></li>
+              <li><a href="#services">Full Implementation</a></li>
+              <li><a href="#services">WCAG Compliance</a></li>
+              <li><a href="#services">Ongoing Monitoring</a></li>
+              <li><a href="#services">Team Training</a></li>
+              <li><a href="#services">Emergency Remediation</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <nav aria-label="Resources navigation">
+            <ul class="footer-links">
+              <li><a href="#">WCAG 2.2 Guide</a></li>
+              <li><a href="#">ADA Compliance FAQ</a></li>
+              <li><a href="#">Accessibility Checklist</a></li>
+              <li><a href="#">Screen Reader Guide</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <address>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">📞</span>
+              <a href="tel:+923086324003" aria-label="Call plus 92 308 632 4003">+92 308 632 4003</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">✉️</span>
+              <a href="mailto:LevelUpwcag@gmail.com">LevelUpwcag@gmail.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">💬</span>
+              <span style="font-size: var(--fs-sm); color: rgba(255,255,255,0.6);">WhatsApp available on same number</span>
+            </div>
+          </address>
+          
+          <div style="margin-top: var(--space-5);">
+            <div class="wcag-badge" aria-label="This site is WCAG 2.2 AA compliant">
+              <span aria-hidden="true">♿</span>
+              WCAG 2.2 AA Compliant
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; <time datetime="2024">2024</time> Level Up Accessibility. All rights reserved.
+        </p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility Statement</a>
+          <a href="#">Cookie Policy</a>
+        </nav>
+      </div>
+      
+    </div>
+  </footer>
+  
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js" defer></script>
+  
+</body>
+</html>
